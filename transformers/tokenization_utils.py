@@ -1142,7 +1142,7 @@ class PreTrainedTokenizer(object):
             if index in self.added_tokens_decoder:
                 tokens.append(self.added_tokens_decoder[index])
             else:
-                tokens.append(self._convert_id_to_token(index))
+                tokens.append(self._convert_id_to_token(int(index)))
         return tokens
 
     def _convert_id_to_token(self, index):
