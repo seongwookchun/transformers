@@ -1,4 +1,4 @@
-__version__ = "2.2.2"
+__version__ = "2.2.3"
 
 # Work around to update TensorFlow's absl.logging threshold which alters the
 # default Python logging output behavior when present.
