@@ -33,6 +33,9 @@ from .data import (is_sklearn_available,
 if is_sklearn_available():
     from .data import glue_compute_metrics, xnli_compute_metrics
 
+# ETRI modified ver
+import etri_tf_tokenization
+
 # Tokenizers
 from .tokenization_utils import (PreTrainedTokenizer)
 from .tokenization_auto import AutoTokenizer
