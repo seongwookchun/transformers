@@ -103,10 +103,17 @@ class BertTokenizer(object):
 
 	def tokenize(self, text):
 		split_tokens = []
-		for token in self.basic_tokenizer.tokenize(text):
+		print('tokenization started')
+		print('@#$%'*100)
+		for idx, token in enumerate(self.basic_tokenizer.tokenize(text, never_split=self.all_special_tokens)):
 			### joonho.lim @ 2019-03-15
-			token += '_'
-			for sub_token in self.wordpiece_tokenizer.tokenize(token):
+# 			token += '_'
+			print('*'*100)
+			print('idx:', idx)
+			print('token:', token)
+			for jdx, sub_token in enumerate(self.wordpiece_tokenizer.tokenize(token)):
+				print('jdx:', jdx)
+				print('subtoken:', subtoken)
 				split_tokens.append(sub_token)
 		return split_tokens
 
